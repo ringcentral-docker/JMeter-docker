@@ -26,7 +26,7 @@ RUN apk update \
 	&& rm -rf /tmp/jmeter
 
 # 5 Copy entrypoint to the container 
-COPY ../script/entrypoint.sh /
+COPY entrypoint.sh /
 
 # 6 Set environment variables
 ENV PATH $PATH:$JMETER_BIN
