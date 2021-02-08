@@ -1,4 +1,4 @@
-name: Build JMeter-docker
+name: Build jmeter-docker
 
 on:
   pull_request:
@@ -18,7 +18,7 @@ jobs:
       - name: Build Image
         run: |
           cd image
-          IMAGE_NAME=ringcentral/JMeter-docker
+          IMAGE_NAME=ringcentral/jmeter-docker
           VERSION="$(awk -F ' '  '/ENV JMETER_VERSION/ {print $3}' Dockerfile)"
           docker build --tag ${IMAGE_NAME} --file Dockerfile .
           docker tag "${IMAGE_NAME}" "${IMAGE_NAME}:VERSION"
