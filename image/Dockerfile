@@ -1,5 +1,5 @@
 # 1 From Apline Linux
-FROM alpine:3.11
+FROM alpine:3.14
 
 # 2 Maintainer name
 LABEL maintainer="summer.gan@ringcentral.com"
